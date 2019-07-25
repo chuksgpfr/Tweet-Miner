@@ -1,0 +1,309 @@
+<div class="page-container">
+  <app-sidebar></app-sidebar>
+  <div class="page-content">
+    <app-header></app-header>
+    <div class="page-inner">
+        <div class="page-title mb-15">
+            <div class="pull-left">
+                <h3 class="breadcrumb-header">Dashboard</h3>
+                <p class="text-muted mb-0">Welcome {{details.firstname}} {{details.lastname}}</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div id="main-wrapper">
+            <div class="row">
+                <div [hidden]="!details.apidetailsempty" class="alert alert-info" role="alert"> 
+                    Update your API details to be able to use this app
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 col-lg-3">
+                    <div class="panel mb-30">
+                        <div class="panel-body widget-desk">
+                            <div class="pull-right">
+                                <h3 class="mt-0 mb-0 f-bold">{{details.totalpull}}
+                                    <span>
+                                        <i class="mdi mdi-arrow-up text-success"></i>
+                                    </span>
+                                </h3>
+                                <p class="text-muted mb-0">Your Total Pull</p>
+                            </div>
+                            <div class="widget-icon">
+                                <i class="mdi mdi-source-pull"></i>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-sm-6 col-xs-12 col-lg-3">
+                    <div class="panel mb-30">
+                        <div class="panel-body widget-desk">
+                            <div class="pull-right">
+                                <h3 class="mt-0 mb-0 f-bold">{{details.dailypull}}
+                                    <span>
+                                        <i class="mdi mdi-arrow-up text-success"></i>
+                                    </span>
+                                </h3>
+                                <p class="text-muted mb-0">Daily Pull</p>
+                            </div>
+                            <div class="widget-icon">
+                                <i class="mdi mdi-calendar-multiple-check"></i>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12 col-lg-3">
+                    <div class="panel mb-30">
+                        <div class="panel-body widget-desk">
+                            <div class="pull-right">
+                                <h3 class="mt-0 mb-0 f-bold">0
+                                    <span>
+                                        <i class="mdi mdi-arrow-up text-success"></i>
+                                    </span>
+                                </h3>
+                                <p class="text-muted mb-0">Total Pull</p>
+                            </div>
+                            <div class="widget-icon">
+                                <i class="mdi mdi-chart-line"></i>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-md-6 col-sm-6 col-xs-12 col-lg-3">
+                    <div class="panel mb-30">
+                        <div class="panel-body widget-desk">
+                            <div class="pull-right">
+                                <h3 class="mt-0 mb-0 f-bold">$4926
+                                    <span>
+                                        <i class="mdi mdi-arrow-down text-danger"></i>
+                                    </span>
+                                </h3>
+                                <p class="text-muted mb-0">Total Revenue</p>
+                            </div>
+                            <div class="widget-icon">
+                                <i class="mdi mdi-currency-usd"></i>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <!-- <div class="row">
+                <div class="col-md-8 col-sm-12 col-xs-12 col-lg-8">
+                    <div class="panel mb-30">
+                        <div class="panel-body">
+                            <h5 class="header-title mb-30 mt-0">Order Overview</h5>
+                            <div id="morris-area-example" style="height:350px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4">
+                    <div class="panel mb-30">
+                        <div class="panel-body">
+                            <h5 class="header-title mb-30 mt-0">Yearly Revenue</h5>
+                            <div id="morris-bar-example" style="height: 350px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div id="main-wrapper">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel mb-0">
+                                <div class="panel-body">
+                                    <h4 class="mt-0 header-title">DATA MINED</h4>
+                                    <p class="text-muted mb-30 font-15">This table contains the details of all the data you have mined</p>
+                                    <div>
+                                        <table id="footable_exa" class="table table-striped" data-sorting="true">
+                                            <thead>
+                                                <tr>
+                                                    <th data-name="id" data-breakpoints="xs" data-type="number">ID</th>
+                                                    <th data-name="firstName">Title</th>
+                                                    <th data-name="lastName">Keyword </th>
+                                                    <th data-name="jobTitle" data-breakpoints="xs">Quantity</th>
+                                                    <th data-name="startedOn" data-breakpoints="xs sm" data-type="date"
+                                                        data-format-string="MMMM Do YYYY">Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tr *ngFor="let data of details.details; index as i">
+                                                <td>{{i}}</td>
+                                                <td>{{data.title}}</td>
+                                                <td>{{data.keyword}}</td>
+                                                <td>{{data.quantity}} </td>
+                                                <td>{{data.date | date}}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+    <div class="page-right-sidebar" id="main-right-sidebar">
+        <div class="page-right-sidebar-inner">
+            <div class="right-sidebar-top">
+                <div class="right-sidebar-tabs">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active" id="chat-tab">
+                            <a href="#chat" aria-controls="chat" role="tab" data-toggle="tab">chat</a>
+                        </li>
+                        <li role="presentation" id="settings-tab">
+                            <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">settings</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="javascript:void(0)" class="right-sidebar-toggle right-sidebar-close" data-sidebar-id="main-right-sidebar">
+                    <i class="mdi mdi-close"></i>
+                </a>
+            </div>
+            <div class="right-sidebar-content">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="chat">
+                        <div class="chat-list">
+                            <span class="chat-title">Recent</span>
+                            <a href="javascript:void(0);" class="right-sidebar-toggle chat-item unread"
+                                data-sidebar-id="chat-right-sidebar">
+                                <div class="user-avatar">
+                                    <img src="assets/images/avatar/avatar-2.jpg" alt=""> </div>
+                                <div class="chat-info">
+                                    <span class="chat-author">David</span>
+                                    <span class="chat-text">where u at?</span>
+                                    <span class="chat-time">08:50</span>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0);" class="right-sidebar-toggle chat-item unread active-user"
+                                data-sidebar-id="chat-right-sidebar">
+                                <div class="user-avatar">
+                                    <img src="assets/images/avatar/avatar-3.jpg" alt=""> </div>
+                                <div class="chat-info">
+                                    <span class="chat-author">Daisy</span>
+                                    <span class="chat-text">Daisy sent a photo.</span>
+                                    <span class="chat-time">11:34</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="chat-list">
+                            <span class="chat-title">Older</span>
+                            <a href="javascript:void(0);" class="right-sidebar-toggle chat-item" data-sidebar-id="chat-right-sidebar">
+                                <div class="user-avatar">
+                                    <img src="assets/images/avatar/avatar-4.jpg" alt=""> </div>
+                                <div class="chat-info">
+                                    <span class="chat-author">Tom</span>
+                                    <span class="chat-text">You: ok</span>
+                                    <span class="chat-time">2d</span>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0);" class="right-sidebar-toggle chat-item active-user" data-sidebar-id="chat-right-sidebar">
+                                <div class="user-avatar">
+                                    <img src="assets/images/avatar/avatar-5.jpg" alt=""> </div>
+                                <div class="chat-info">
+                                    <span class="chat-author">Anna</span>
+                                    <span class="chat-text">asdasdasd</span>
+                                    <span class="chat-time">4d</span>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0);" class="right-sidebar-toggle chat-item active-user" data-sidebar-id="chat-right-sidebar">
+                                <div class="user-avatar">
+                                    <img src="assets/images/avatar/avatar-6.jpg" alt=""> </div>
+                                <div class="chat-info">
+                                    <span class="chat-author">Liza</span>
+                                    <span class="chat-text">asdasdasd</span>
+                                    <span class="chat-time">&nbsp;</span>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0);" class="load-more-messages" data-toggle="tooltip" data-placement="bottom"
+                                title="Load More">&bull;&bull;&bull;</a>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <div class="right-sidebar-settings">
+                            <span class="settings-title">General Settings</span>
+                            <ul class="sidebar-setting-list list-unstyled">
+                                <li>
+                                    <span class="settings-option">Notifications</span>
+                                    <input type="checkbox" class="js-switch" checked/> </li>
+                                <li>
+                                    <span class="settings-option">Activity log</span>
+                                    <input type="checkbox" class="js-switch" checked/> </li>
+                                <li>
+                                    <span class="settings-option">Automatic updates</span>
+                                    <input type="checkbox" class="js-switch" /> </li>
+                                <li>
+                                    <span class="settings-option">Allow backups</span>
+                                    <input type="checkbox" class="js-switch" /> </li>
+                            </ul>
+                            <span class="settings-title">Account Settings</span>
+                            <ul class="sidebar-setting-list list-unstyled">
+                                <li>
+                                    <span class="settings-option">Chat</span>
+                                    <input type="checkbox" class="js-switch" checked/> </li>
+                                <li>
+                                    <span class="settings-option">Incognito mode</span>
+                                    <input type="checkbox" class="js-switch" /> </li>
+                                <li>
+                                    <span class="settings-option">Public profile</span>
+                                    <input type="checkbox" class="js-switch" /> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-right-sidebar" id="chat-right-sidebar">
+        <div class="page-right-sidebar-inner">
+            <div class="right-sidebar-top">
+                <div class="chat-top-info">
+                    <span class="chat-name">Noah</span>
+                    <span class="chat-state">2h ago</span>
+                </div>
+                <a href="javascript:void(0)" class="right-sidebar-toggle chat-sidebar-close pull-right" data-sidebar-id="chat-right-sidebar">
+                    <i class="mdi mdi-close"></i>
+                </a>
+            </div>
+            <div class="right-sidebar-content">
+                <div class="right-sidebar-chat slimscroll">
+                    <div class="chat-bubbles">
+                        <div class="chat-start-date">02/06/2017 5:58PM</div>
+                        <div class="chat-bubble them">
+                            <div class="chat-bubble-img-container">
+                                <img src="assets/images/avatar/avatar-2.jpg" alt=""> </div>
+                            <div class="chat-bubble-text-container">
+                                <span class="chat-bubble-text">Hello</span>
+                            </div>
+                        </div>
+                        <div class="chat-bubble me">
+                            <div class="chat-bubble-text-container">
+                                <span class="chat-bubble-text">Hello!</span>
+                            </div>
+                        </div>
+                        <div class="chat-start-date">03/06/2017 4:22AM</div>
+                        <div class="chat-bubble me">
+                            <div class="chat-bubble-text-container">
+                                <span class="chat-bubble-text">lorem</span>
+                            </div>
+                        </div>
+                        <div class="chat-bubble them">
+                            <div class="chat-bubble-img-container">
+                                <img src="assets/images/avatar/avatar-2.jpg" alt=""> </div>
+                            <div class="chat-bubble-text-container">
+                                <span class="chat-bubble-text">ipsum dolor sit amet</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-write">
+                    <form class="form-horizontal" action="javascript:void(0);">
+                        <input type="text" class="form-control" placeholder="Say something"> </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

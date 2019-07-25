@@ -1,0 +1,54 @@
+<div class="page-container">
+    <app-sidebar></app-sidebar>
+    <div class="page-content">
+      <app-header></app-header>
+
+    <div class="page-inner">
+        <div id="main-wrapper">
+            <div id="main-wrapper">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel mb-0">
+                                <div class="panel-body">
+                                    <h4 class="mt-0 header-title">Mined Data</h4>
+                                    <p class="text-muted mb-30 font-15">All the data you have miined with this tool. </p>
+                                    <div>
+                                        <table id="footable_exa" class="table table-striped" data-sorting="true">
+                                            <thead>
+                                                <tr>
+                                                    <th data-name="id" data-breakpoints="xs" data-type="number">ID</th>
+                                                    <th data-name="firstName">Title</th>
+                                                    <th data-name="lastName">Keyword </th>
+                                                    <th data-name="jobTitle" data-breakpoints="xs">Quantity</th>
+                                                    <th data-name="startedOn" data-breakpoints="xs sm" data-type="date"
+                                                        data-format-string="MMMM Do YYYY">Date</th>
+                                                    <th>Download</th>
+                                                    <th>Visualize</th>
+                                                </tr>
+                                            </thead>
+                                            <tr *ngFor="let data of details.details; index as i">
+                                                <td>{{i}}</td>
+                                                <td>{{data.title}}</td>
+                                                <td>{{data.keyword}}</td>
+                                                <td>{{data.quantity}} </td>
+                                                <td>{{data.date | date}}</td>
+                                                <td>
+                                                  <button (click)="download(data.fileName)" class="btn btn-primary">DOWNLOAD</button>
+                                                </td>
+                                                <td>
+                                                  <a routerLink="/dashboard/visual/{{data.title}}" class="btn btn-danger">VISUALISE</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+
+    </div>
+</div>

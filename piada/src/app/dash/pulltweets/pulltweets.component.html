@@ -1,0 +1,79 @@
+<div class="page-container">
+    <app-sidebar></app-sidebar>
+    <div class="page-content">
+      <app-header></app-header>
+
+        <div class="page-inner">
+            <div class="page-title mb-15">
+                <div class="pull-left">
+                    <h3 class="breadcrumb-header">Pull Tweet</h3>
+                    <p class="text-muted mb-0">Pull tweets based on keyword from twitter</p>
+                    
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div id="main-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel">
+                            <div class="panel-body">
+                                <h4 class="mt-0 header-title">Pull Tweet</h4>
+                                <p class="text-muted mb-30 font-15">All fields with <span class="text-danger">*</span> are required</p>
+                                <form [formGroup]="pullForm" (submit)="pulltweets()">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label>Title<span class="text-danger">*</span></label>
+                                            <input formControlName="Title" placeholder="e.g. bomb threat in lagos" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Search Keyword<span class="text-danger">*</span></label>
+                                                <input formControlName="Keyword" type="text" placeholder="e.g. bringbackourgirls" class="form-control" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                    <label>Quantity<span class="text-danger">*</span></label>
+                                                <input formControlName="Quantity" type="number" min="100" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>From: <span class="text-danger">*</span></label>
+                                                <input formControlName="From" type="date" class="form-control" />
+                                                <!-- <input formControlName="From" type="text" class="form-control" /> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>To: <span class="text-danger">*</span></label>
+                                                <input formControlName="To" type="date" class="form-control"/>
+                                                <!-- <input formControlName="To" type="text" class="form-control" /> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <button class="btn btn-primary btn-block"><i hidden class="fa fa-spinner fa-spin" style="font-size:24px"></i> PULL DATA</button>
+                                    </div>
+                                </form>
+                                <!-- <div class="row">
+                                    <button (click)="createExcel()" class="btn btn-primary btn-block">CREATE CSV</button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="page-container">
+  <app-sidebar></app-sidebar>
+  <div class="page-content">
+    <app-header></app-header>
+    
+    <div class="page-inner">
+      <div class="page-title mb-15">
+          <div class="pull-left">
+              <h3 class="breadcrumb-header"><i class="menu-icon mdi mdi-trending-up"></i> Trends</h3>
+              <p class="text-muted mb-0">Get Trends by selecting any country of your choice.</p>
+          </div>
+          <div class="clearfix"></div>
+      </div>
+      <div id="main-wrapper">
+          <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                  <div class="panel mb-0">
+                      <div class="panel-body">
+                          <h4 class="mt-0 mb-30 header-title" *ngFor="let place of location">{{place.name}}</h4>
+                          <select (change)="getTrends($event.target.value)" class="form-control">
+                            <option value="1" selected>World Wide</option>
+                            <option value="23424908">Nigeria</option>
+                            <option value="23424775">Canada</option>
+                            <option value="23424977">United States</option>
+                            <option value="23424975">United Kingdom</option>
+                          </select>
+                          <table class="table tables-responsive mb-0">
+                              <thead>
+                                  <tr>
+                                      <th scope="col">#</th>
+                                      <th scope="col">Name</th>
+                                      <th scope="col">URL</th>
+                                      <th scope="col">Tweet Volume</th>
+                                      <th scope="col">Action</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let trend of details; index as i">
+                                      <td>{{i}}</td>
+                                      <td>{{trend.name}}</td>
+                                      <td>{{trend.url}}</td>
+                                      <td>{{trend.tweet_volume}}</td>
+                                      <td>
+                                          <a routerLink="/dashboard/minetweet/{{trend.name}}" class="btn btn-primary">Pull Data</a>
+                                      </td>
+                                  </tr>
+                                  
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <app-footer></app-footer>
+  </div>
+
+  </div>
+</div>

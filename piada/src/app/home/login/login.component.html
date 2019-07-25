@@ -1,0 +1,46 @@
+<div class="account-background">
+    <div class="account-table">
+        <div class="account-table-cell">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-lg-offset-4">
+                        <div class="bg-form p-4 mt-5 rounded">
+                            <div class="text-center">
+                                <h3 class="text-uppercase ac_logo font-weight-bold">PIADA</h3>
+                                <p class="text-white mt-10 mb-30">Sign into your account</p>
+                            </div>
+                            <form [formGroup]="loginForm" (submit)="login()" class="login_account">
+                                <div class="row">
+                                    <div class="col-lg-12 mt-5">
+                                        <input formControlName="Email" type="email" class="form-control" placeholder="Email" required=""> </div>
+                                    <div class="col-lg-12 mt-5">
+                                        <input formControlName="Password" type="password" class="form-control" id="exampleInputPassword3" placeholder="Password"> </div>
+                                    <div class="col-lg-12 mt-5">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox">Remember me </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 mb-30 mt-10">
+                                        <button class="btn btn-danger w-100">Sign in</button>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="mb-0 mt-20">
+                                            <a href="pages-recoverpw.html" class="text-white font-weight-bold">Forgot your password ?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="text-center mt-20">
+                            <p>
+                                <small class="text-dark mr-5">Don't have an account ?</small>
+                                <a routerLink="/register" class="text-dark font-weight-bold">Create an account</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
