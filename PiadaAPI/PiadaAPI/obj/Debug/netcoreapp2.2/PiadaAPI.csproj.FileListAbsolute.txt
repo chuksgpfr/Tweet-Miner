@@ -1,0 +1,14 @@
+C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\bin\Debug\netcoreapp2.2\PiadaAPI.deps.json
+C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\bin\Debug\netcoreapp2.2\PiadaAPI.runtimeconfig.json
+C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\bin\Debug\netcoreapp2.2\PiadaAPI.runtimeconfig.dev.json
+C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\bin\Debug\netcoreapp2.2\PiadaAPI.dll
+C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.csproj.CoreCompileInputs.cache
+C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.RazorAssemblyInfo.cache
+C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.RazorAssemblyInfo.cs
+C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.AssemblyInfoInputs.cache
+C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.AssemblyInfo.cs
+C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.RazorTargetAssemblyInfo.cache
+C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\bin\Debug\netcoreapp2.2\PiadaAPI.pdb
+C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.dll
+C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.pdb
+C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.csprojAssemblyReference.cache
