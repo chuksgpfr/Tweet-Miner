@@ -12,3 +12,17 @@ C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\bin\Debug\netcoreapp2.2\PiadaA
 C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.dll
 C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.pdb
 C:\Users\ChuksGPFR\source\repos\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.csprojAssemblyReference.cache
+C:\Users\ChuksGPFR\Programming Folder\Github Repo\Tweet Miner\PiadaAPI\PiadaAPI\bin\Debug\netcoreapp2.2\PiadaAPI.deps.json
+C:\Users\ChuksGPFR\Programming Folder\Github Repo\Tweet Miner\PiadaAPI\PiadaAPI\bin\Debug\netcoreapp2.2\PiadaAPI.runtimeconfig.json
+C:\Users\ChuksGPFR\Programming Folder\Github Repo\Tweet Miner\PiadaAPI\PiadaAPI\bin\Debug\netcoreapp2.2\PiadaAPI.runtimeconfig.dev.json
+C:\Users\ChuksGPFR\Programming Folder\Github Repo\Tweet Miner\PiadaAPI\PiadaAPI\bin\Debug\netcoreapp2.2\PiadaAPI.dll
+C:\Users\ChuksGPFR\Programming Folder\Github Repo\Tweet Miner\PiadaAPI\PiadaAPI\bin\Debug\netcoreapp2.2\PiadaAPI.pdb
+C:\Users\ChuksGPFR\Programming Folder\Github Repo\Tweet Miner\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.csprojAssemblyReference.cache
+C:\Users\ChuksGPFR\Programming Folder\Github Repo\Tweet Miner\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.csproj.CoreCompileInputs.cache
+C:\Users\ChuksGPFR\Programming Folder\Github Repo\Tweet Miner\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.RazorAssemblyInfo.cache
+C:\Users\ChuksGPFR\Programming Folder\Github Repo\Tweet Miner\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.RazorAssemblyInfo.cs
+C:\Users\ChuksGPFR\Programming Folder\Github Repo\Tweet Miner\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.AssemblyInfoInputs.cache
+C:\Users\ChuksGPFR\Programming Folder\Github Repo\Tweet Miner\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.AssemblyInfo.cs
+C:\Users\ChuksGPFR\Programming Folder\Github Repo\Tweet Miner\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.RazorTargetAssemblyInfo.cache
+C:\Users\ChuksGPFR\Programming Folder\Github Repo\Tweet Miner\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.dll
+C:\Users\ChuksGPFR\Programming Folder\Github Repo\Tweet Miner\PiadaAPI\PiadaAPI\obj\Debug\netcoreapp2.2\PiadaAPI.pdb

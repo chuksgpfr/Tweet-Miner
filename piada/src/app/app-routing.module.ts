@@ -10,6 +10,7 @@ import { EditapidetailsComponent } from './dash/editapidetails/editapidetails.co
 import { YourfolderComponent } from './dash/yourfolder/yourfolder.component';
 import { TrendsComponent } from './dash/trends/trends.component';
 import { VisualComponent } from './dash/visual/visual.component';
+import { VisualCircleComponent } from './dash/visual-circle/visual-circle.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'/login', pathMatch:'full'},
@@ -24,7 +25,8 @@ const routes: Routes = [
       {path:'editapidetails', component:EditapidetailsComponent},
       {path: 'yourfolder', component:YourfolderComponent},
       {path: 'trends', component:TrendsComponent},
-      {path: 'visual/:filename', component:VisualComponent}
+      {path: 'visual/:filename', component:VisualComponent},
+      {path: 'visual-circle/:filename', component:VisualCircleComponent}
     ], canActivate:[AuthGuard]}
   ]}
   

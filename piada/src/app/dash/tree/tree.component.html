@@ -1,7 +1,10 @@
 <ul *ngIf="treeData">
   <li *ngFor="let node of treeData">
-      <span *ngIf="node.children != 0"><b>></b></span>
-      <span (click)="toggleChild(node)" > {{ node.Tweet }} </span>
-      <!-- <app-tree *ngIf="node.showChildren" [treeData]="node.children"></app-tree> -->
+      <span *ngIf="node.children != 0"></span>
+      <span (click)="toggleChild(node)" ><img [src]="imageUrl"/> {{ node.country }} </span>
+      <span (click)="toggleChild(node)" > {{ node.state }} </span>
+      <span (click)="toggleChild(node)" > {{ node.tweet }}{{ node.amount }} </span>
+      <app-tree *ngIf="node.showChildren" [treeData]="node.children"></app-tree>
+      
   </li>  
 </ul>

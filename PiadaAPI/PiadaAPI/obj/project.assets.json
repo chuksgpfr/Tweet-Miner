@@ -12515,11 +12515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ChuksGPFR\\source\\repos\\PiadaAPI\\PiadaAPI\\PiadaAPI.csproj",
+      "projectUniqueName": "C:\\Users\\ChuksGPFR\\Programming Folder\\Github Repo\\Tweet Miner\\PiadaAPI\\PiadaAPI\\PiadaAPI.csproj",
       "projectName": "PiadaAPI",
-      "projectPath": "C:\\Users\\ChuksGPFR\\source\\repos\\PiadaAPI\\PiadaAPI\\PiadaAPI.csproj",
+      "projectPath": "C:\\Users\\ChuksGPFR\\Programming Folder\\Github Repo\\Tweet Miner\\PiadaAPI\\PiadaAPI\\PiadaAPI.csproj",
       "packagesPath": "C:\\Users\\ChuksGPFR\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ChuksGPFR\\source\\repos\\PiadaAPI\\PiadaAPI\\obj\\",
+      "outputPath": "C:\\Users\\ChuksGPFR\\Programming Folder\\Github Repo\\Tweet Miner\\PiadaAPI\\PiadaAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\ProgramData\\Xamarin\\NuGet\\",

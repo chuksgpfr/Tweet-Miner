@@ -1,7 +1,10 @@
 export interface TreeNode {
-    Tweet: string;
-    location: string;
-    numberOfRetweet: string;
+    country:string;
     showChildren: boolean;
     children: any[];
+    state:string;
+    tweet: string;
+    location: string;
+    amount: string;
+    
 }

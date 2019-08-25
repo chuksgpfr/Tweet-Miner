@@ -4,6 +4,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { NgxTreeDndModule } from 'ngx-tree-dnd';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { YourfolderComponent } from './dash/yourfolder/yourfolder.component';
 import { TrendsComponent } from './dash/trends/trends.component';
 import { VisualComponent } from './dash/visual/visual.component';
 import { TreeComponent } from './dash/tree/tree.component';
+import { VisualCircleComponent } from './dash/visual-circle/visual-circle.component';
 
 @NgModule({
   declarations: [
@@ -39,12 +41,14 @@ import { TreeComponent } from './dash/tree/tree.component';
     YourfolderComponent,
     TrendsComponent,
     VisualComponent,
-    TreeComponent
+    TreeComponent,
+    VisualCircleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxTreeDndModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule, // required animations module

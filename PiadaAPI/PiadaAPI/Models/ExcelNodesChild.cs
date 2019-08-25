@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 
 namespace PiadaAPI.Models
 {
-    public class ExcelNodes
+    public class ExcelNodesChild
     {
+        public string State { get; set; }
         public string Country { get; set; }
         public bool ShowChildren { get; set; }
-        public List<ExcelNodesChild> Children { get; set; }
-
+        public long Total { get; set; }
+        public List<ExcelJson> Children { get; set; }
     }
 }

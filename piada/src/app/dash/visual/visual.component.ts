@@ -41,6 +41,20 @@ toggleChildren(node){
       node.showChildren = !node.showChildren;
   }
 
+//   youTree = [
+//     {
+//       name: 'first elem',
+//       id: 1234567890,
+//       childrens: [
+//         {
+//           name: 'first child elem',
+//           id: 0987654321,
+//           childrens: []
+//         }
+//       ]
+//     },
+//   ];
+
   node = this.fileData;
   nodes = [
     {

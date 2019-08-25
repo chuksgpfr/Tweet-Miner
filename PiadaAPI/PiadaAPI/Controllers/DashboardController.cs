@@ -187,28 +187,52 @@ namespace PiadaAPI.Controllers
             var excelToJson = _helper.GetExcelFile(filepath);
             var countryStates = ReadJson();
 
+            //the node for showing my tweet and children
             List<ExcelNodes> excelNodes = new List<ExcelNodes>();
-            List<ExcelJson> excelJsons = new List<ExcelJson>();
+
+            List<ExcelNodesChild> excelNodeChild = new List<ExcelNodesChild>();
+
+            //the json with my tweets
+            List<ExcelJson> tweetJsons = new List<ExcelJson>();
 
             
             foreach (var country in countryStates)
             {
-                var thetweets = excelToJson.Where(x => x.Location == country.Country);
-
-                if (thetweets.Any())
+                foreach (var state in country.States)
                 {
-                    //excelJsons = thetweets.ToList();
-                    //foreach (var thetweet in thetweets.ToList())
-                    //{
-                    //    var newJson = new ExcelJson() { Location = country.Country, Amount = thetweet.Amount, Tweet = thetweet.Tweet };
-                    //    excelJsons.Add(newJson);
-                        
-                    //}
-                    var excelNode = new ExcelNodes() { Location = country.Country, ShowChildren = false, Children = thetweets.ToList() };
-                    excelNodes.Add(excelNode);
+                    foreach (var tweet in excelToJson)
+                    {
+                        if (tweet.Location.Contains(","))
+                        {
+                            string[] loc = tweet.Location.Split(',');
+                            if (loc[0] == state)
+                            {
+                                var newTweet = new ExcelJson() { Tweet = tweet.Tweet, Location = loc[0], Amount = tweet.Amount };
+                                tweetJsons.Add(newTweet);
+                            }
+                        }
 
+                    }
+                    var stateTweet = tweetJsons.Where(x => x.Location == state);
+                    int total = 0;
+                    if (stateTweet.Any())
+                    {
+                        
+                        foreach (var stt in stateTweet)
+                        {
+                            
+                            total += Convert.ToInt32(stt.Amount);
+                        }
+                        var newStateTweet = new ExcelNodesChild() { State = state, Country = country.Country, Total = total, ShowChildren = false, Children = stateTweet.ToList() };
+                        excelNodeChild.Add(newStateTweet);
+                    }
                 }
-                    
+                var countryTweet = excelNodeChild.Where(x => x.Country == country.Country);
+                if (countryTweet.Any())
+                {
+                    var newCountryTweet = new ExcelNodes() { Country = country.Country, Children = countryTweet.ToList(), ShowChildren = false };
+                    excelNodes.Add(newCountryTweet);
+                }
             }
                
             return Ok(excelNodes);

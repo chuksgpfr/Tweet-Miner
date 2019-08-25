@@ -8,8 +8,10 @@ import { TreeNode } from 'src/app/models/treenode';
 })
 export class TreeComponent implements OnInit {
 
+  imageUrl = "assets/icons/plus.png";
   constructor() { }
 
+  ret = "Num of retweet";
   @Input() treeData: TreeNode[];
 
   ngOnInit() {
@@ -17,6 +19,12 @@ export class TreeComponent implements OnInit {
 
   toggleChild(node) {
     node.showChildren = !node.showChildren;
+    if(node.showChildren){
+      this.imageUrl = "assets/icons/minus.png";
+    }else{
+      this.imageUrl = "assets/icons/plus.png";
+    }
   }
+
 
 }

@@ -1,0 +1,40 @@
+<div class="page-container">
+    <app-sidebar></app-sidebar>
+    <div class="page-content">
+      <app-header></app-header>
+      <div class="page-inner">
+        <div id="main-wrapper">
+            <div id="main-wrapper">
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div class="panel mb-0">
+                              <div class="panel-body">
+                                  <h4 class="mt-0 header-title">Visualize Data</h4>
+                                  <p class="text-muted mb-30 font-15">You are currently Visualizing <b>{{filename}}</b> data you have in your folder. </p>
+                                  <div *ngIf="fileData">
+                                      <div *ngFor="let data of fileData">
+                                          <p>{{data.country}}</p>
+                                          <div class="row">
+                                              <div *ngFor="let statedata of data.children" class="col-md-2">
+                                                  <div class="sonar-wrapper">
+                                                    <div class="sonar-emitter">
+                                                      <p>{{statedata.state}} : {{statedata.total}} RT</p>
+                                                      <div class="sonar-wave">{{statedata.total}}</div>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+        <app-footer></app-footer>
+      </div>
+  
+    </div>
+  </div>
+  
